@@ -119,28 +119,14 @@ li {
     padding: 10px;
     border-radius: 5px;
 }
-.sanPhamLienQuan {
-    font-family: Arial, sans-serif;
-}
-.product {
-    display: inline-block;
-    width: 40vw;
-    padding: 10px 0;
-}
-.product img {
-    vertical-align: middle;
-    margin-right: 10px;
+.sanPhamLienQuan img {
     width: 10vh;
     height: 10vh;
+    border-radius: 10px;
 }
-
-.product-name {
-    vertical-align: middle;
-    display: inline-block;
+.sanPhamLienQuan {
+    margin-top: 3vh;
 }
-
-.product .money {
-    display: inline-block;
-    font-weight: bold;
-    margin-left:25vw;
-}
+.sanPhamLienQuan tr td:nth-child(3) {
+    padding-left: 25vw;
+} 
