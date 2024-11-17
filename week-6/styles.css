@@ -1,0 +1,107 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  width: 100%;
+}
+body {
+  font-family: system-ui, sans-serif;
+  padding: 2em 10%;
+  background-image: url(https://images.unsplash.com/photo-1684172881176-2117795c2005?q=80&w=1709&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+:root {
+  --fs-xl: 5rem;
+  --normal: 1.5rem;
+  --brown:#c2bb86;
+  --yellow:#fce920;
+  --orange:#e28c1b;
+}
+.image {
+  background-image: url(https://pinaywise.com/wp-content/uploads/2024/02/Best-Travel-Elegant-Evening-Bag-1500x500.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 2rem;
+}
+.image__text {
+  font-size: var(--fs-xl);
+  padding: 1.5em 0 1em 0;
+  color: white;
+}
+.image__search-bar {
+    width: 50%;
+    margin-bottom: 1.2rem;
+
+}
+.image__search-bar input {
+    width: 100%;
+    font-size: 2rem;
+    padding: 0.3em 0.7em;
+    border-radius: 23px;
+    border: none;
+
+}
+.image__search-bar input::placeholder {
+  color: var(--brown);
+  font-weight: 500;
+}
+.content {
+    display: flex;
+    gap: 2.5rem;
+}
+.content__bag-types {
+    display: flex;
+    flex-direction: column; 
+    justify-content: space-between;
+    gap: 1rem;
+    width: 18%;
+}
+.content__type {
+    color: #bab476;
+    font-size: var(--normal);
+    border-radius: 15px;
+    padding: 0.3em;
+}
+.content__type:hover {
+  color: white;
+  background-color: var(--orange);
+}
+.content__items {
+    display: flex;
+    width: 82%;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+.content__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.content__img img {
+    width: 100%;
+    min-height: fit-content;
+}
+.content__text, .content__button {
+  font-size: var(--normal);
+  font-weight: 600;
+}
+.content__button {
+  padding: 0.5em 1.5em;
+  border-radius: 20px;
+  width: 100%;
+  margin-top: 0.3em;
+  color: var(--yellow);
+  background-color: var(--orange);
+  border: none !important;
+}
+

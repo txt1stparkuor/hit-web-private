@@ -1,0 +1,118 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    padding: 2vh 10vw;
+    background-color: #fbf9e2;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.top-bar {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 3vh 0;
+}
+.top-bar--nav-link {
+    display: flex;
+    justify-content: space-between;
+    width: 40vw;
+}
+#search-bar {
+    width: 30vw;
+    height:6vh;
+    border-radius: 25px;
+    padding: 0 1vw;
+    font-size: 16pt;
+    border-color: orange;
+}
+.top-bar--nav-link h2:hover {
+    background-color: #e2f342;
+    color: #c46110;
+}
+.top-bar--nav-link h2 {
+    border-radius: 10px;
+    height: 5vh;
+    width: 10vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24pt;
+}
+.content {
+    display: flex;
+    flex-wrap: wrap;    
+    padding: 3vh 0;
+}
+.content--text {
+    display: flex;
+    align-items: flex-end;
+    flex-flow: wrap column;
+    width: 40vw;
+    gap: 3vh;
+    text-align: end;
+}
+.content--img img {
+    width: 30vw;
+    border-radius: 15px;
+}
+.content--text{
+    font-size: 24pt;
+}
+.content--text p {
+    width: 30vw;
+
+}
+.content--text a {
+    text-decoration: none;
+    background-color: #e2f342;
+    height: 6vh;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2vh;
+}   
+.item-header {
+    background-color: #fed897;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5vh;
+    border-radius: 15px;
+    font-size: 18pt;
+}
+.items {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1vw;
+    padding: 3vh 0;
+}
+.item img {
+    width: 24vw;
+    border-radius: 15px;
+    height: 40vh;
+}
+.item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.item--text h3{
+    width: 24vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24pt;
+}
+.item--text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e2f342;
+    height: 7vh;
+    border-radius: 15px;
+}
