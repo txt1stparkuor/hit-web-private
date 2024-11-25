@@ -1,0 +1,377 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.header {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+  font-size: 1rem;
+  padding: 0 10vw;
+}
+body {
+  font-family: Poppins;
+}
+.nav ul {
+  display: flex;
+  gap: 2.375em;
+  list-style-type: none;
+}
+.nav ul,
+.login-container,
+.logo {
+  flex: 1;
+}
+.login-container {
+  display: flex;
+  justify-content: flex-end;
+}
+.content1 {
+  display: flex;
+  gap: 10em;
+  padding: 10vh 10vw;
+}
+.content1__text h5 {
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 19.5px;
+  letter-spacing: 0.185em;
+  color: #ff7d01;
+  padding-bottom: 18px;
+}
+.login-container button {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 19px;
+  border-radius: 25px;
+  width: 127px;
+  height: 50px;
+  border: 2px solid #e7e7e7;
+}
+.login-container button:nth-child(2) {
+  border: none;
+}
+.content1__text h1 {
+  font-size: 50px;
+  font-weight: 700;
+  line-height: 56px;
+  padding-bottom: 25px;
+}
+.content1__text {
+  display: flex;
+  flex-direction: column;
+  width: 496px;
+  height: 366px;
+  text-align: left;
+}
+
+.text__button {
+  display: flex;
+  gap: 36px;
+  margin-top: 50px;
+}
+.button--orange {
+  background: linear-gradient(103.38deg, #f67102 5.1%, #f4a91e 86.29%);
+  color: white;
+}
+.button--white {
+  background-color: white;
+  color: #f5830b;
+}
+.get {
+  width: 149px;
+  height: 56px;
+  border-radius: 41px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  border: none;
+}
+.play {
+  width: 59px;
+  height: 59px;
+  box-shadow: 0px 17px 25px 0px rgba(140, 141, 146, 0.12);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  border: none;
+}
+.watch {
+  border: none;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  text-align: center;
+  background-color: white;
+}
+.content1__card {
+  width: 664px;
+  height: 573px;
+  position: relative;
+  display: grid;
+  place-items: center;
+}
+.card__img {
+  position: absolute;
+}
+.card__base {
+  position: absolute;
+  z-index: -1;
+  margin-top: 97px;
+}
+.card__abstract {
+  display: flex;
+  width: 156px;
+  height: 54px;
+  border-radius: 34px;
+  box-shadow: 0px 6px 64px 0px #607bb02b;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  position: absolute;
+  background-color: white;
+}
+.abstract__tick {
+  width: 23px;
+  height: 23px;
+  border-radius: 50%;
+  background: #fff3e0;
+  display: grid;
+  place-items: center;
+}
+.abstract__progress {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.abstract__progress1 {
+  width: 44px;
+  height: 4px;
+  border-radius: 13px;
+  background: #ff7d00;
+}
+.abstract__outer-bar1 {
+  width: 65px;
+  height: 4px;
+  border-radius: 13px;
+  background: #cad6f0;
+}
+.abstract__progress2 {
+  width: 25px;
+  height: 4px;
+  border-radius: 13px;
+  background: #685ce5;
+}
+
+.abstract__outer-bar2 {
+  width: 48px;
+  height: 4px;
+  border-radius: 13px;
+  background: #cad6f0;
+}
+.item1 {
+  top: 233px;
+  left: 0px;
+}
+.item2 {
+  top: 130px;
+  right: 0px;
+}
+.item3 {
+  bottom: 83px;
+  right: 0px;
+}
+.card__instagram {
+  top: 250px;
+  right: 125px;
+}
+.float {
+  position: absolute;
+  z-index: 100;
+}
+.card__twitter {
+  top: 392px;
+}
+.card__data {
+  top: 470px;
+  left: 120px;
+}
+.card__popular {
+  top: 380px;
+  right: 375px;
+  z-index: 99;
+}
+.content2 {
+  display: flex;
+  justify-content: space-between;
+  padding: 15vh 10vw;
+}
+.content2__img {
+  position: relative;
+  width: 601px;
+  height: 532.6px;
+}
+.item4 {
+  top: 243px;
+  left: -70px;
+}
+.follower {
+  right: 30px;
+  top: 350px;
+}
+.like {
+  top: 130px;
+  right: 120px;
+}
+.heart {
+  top: 50%;
+  right: 50px;
+}
+.content2__text {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 502px;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1.5625rem;
+  text-align: left;
+}
+.content2__text h3 {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  letter-spacing: 0.16em;
+  color: #ff7d00;
+}
+.content2__text h1 {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 50px;
+}
+p {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 26px;
+  color: #79899d;
+}
+.get-in-touch {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 26px;
+  width: 170px;
+  height: 56px;
+  border-radius: 41px;
+  border: none;
+}
+.content3 {
+  background-color: #F4F8FD;
+  padding: 10vh 10vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10rem;
+}
+.content3__text {
+  display: flex;
+  flex-flow: column wrap;
+  width: 40%;
+  gap: 1.5625rem;
+  text-align: left;
+}
+.content3__text h3 {
+font-size: 16px;
+font-weight: 600;
+line-height: 24px;
+letter-spacing: 0.16em;
+color: #FF7D00;
+}
+.content3__text h1 {
+font-family: Poppins;
+font-size: 40px;
+font-weight: 700;
+line-height: 50px;
+}
+.content3__img {
+  position: relative;
+  flex:1;
+  text-align: right;
+}
+.content3__img img:nth-child(2) {
+  top: -180px;
+  left: -150px;
+}
+.content3__img img:nth-child(3) {
+  bottom: -20%;
+  right: 8%;
+}
+.content3__img img:nth-child(4) {
+  left: -50px;
+  bottom: -50px;
+}
+.content4 {
+  display: flex;
+  justify-content: space-between;
+  padding: 10vh 10vw;
+  gap: 10rem;
+  margin-bottom: 30vh;
+}
+.bg {
+  position: relative;
+}
+.card1 {
+  left: -10px;
+  top:-50px;
+}
+.card2 {
+  bottom: -115px;
+  left: -10px;
+}
+.card3 {
+  right: -60%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+}
+.content4__text{
+  width: 40%;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.content4__text h3 {
+  color: #FF7D00;
+font-size: 16px;
+font-weight: 600;
+line-height: 24px;
+letter-spacing: 0.16em;
+}
+.content4__text> p {
+font-size: 16px;
+font-weight: 500;
+line-height: 26px;
+margin-top: 20px;
+}
+.more-text {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem;
+}
+.more-text h2{
+font-size: 25px;
+font-weight: 600;
+line-height: 26px;
+color: #F4A11A;
+
+}
+.more-text p {
+font-size: 16px;
+font-weight: 500;
+line-height: 26px;
+}
+.content4__text button {
+  margin-top: 30px;
+}
