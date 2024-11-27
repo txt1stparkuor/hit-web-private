@@ -1,0 +1,18 @@
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container {
+    display: grid;
+    grid-template-areas: 
+    'item item'
+    'item .';
+    grid-template-rows: repeat(2,100px);
+    grid-template-columns: repeat(2,100px);
+}
+.item {
+    background-color: blue;
+    grid-area: item;
+}
