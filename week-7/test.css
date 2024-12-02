@@ -1,18 +1,18 @@
-body {
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.box {
+    height: 300px;
+    width: 100px;
+    background-color: red;
+    border: 1px solid black;
 }
 .container {
-    display: grid;
-    grid-template-areas: 
-    'item item'
-    'item .';
-    grid-template-rows: repeat(2,100px);
-    grid-template-columns: repeat(2,100px);
+    display: flex;
+    gap: 10px;
+    justify-content: center;
 }
-.item {
-    background-color: blue;
-    grid-area: item;
+body {
+    font-size: 2rem;
+}
+button {
+    border-radius: 25px;
+    background-color: orange;
 }

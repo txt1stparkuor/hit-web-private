@@ -1,0 +1,164 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+:root {
+    --orange:#F06C25;
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    align-items: center;
+}
+.header h1, .text h1, .main .top2 > h1:nth-child(1), .main .top1 > h1:nth-child(2){
+    color: var(--orange);
+}
+body {
+    font-family:"Baloo 2", system-ui, sans-serif;
+}
+h1 {
+    font-weight: 600;
+}
+p {
+    font-weight:500;
+font-size: 1.25rem;
+line-height: 2rem;
+text-align: left;
+font-style: normal;
+}
+img {
+    width: 100%;
+}
+.icon > * {
+    width:50px;
+}
+.icon > img {
+    object-fit: contain;
+}
+.icon {
+    display: flex;
+    gap: 0.125em;
+    font-size: 2rem;
+    align-items: center;
+}
+.main {
+    display: flex;  
+    align-items: center;
+    flex-direction: column;
+    width: 75%;
+    margin-inline: auto;
+    margin-top: 7em;
+}
+.text {
+    grid-area: text;
+}
+.logo {
+    grid-area: logo;
+}
+.text-logo {
+    display: grid;
+    grid-template-columns: 1fr 260px;
+    grid-template-areas:
+    'text logo';
+    column-gap: 10em;
+}
+@media (width<=575px) {
+    .text-logo {
+        grid-template-columns: auto;
+        grid-template-rows: 1fr;
+        grid-template-areas:
+        'logo'
+        'text';
+    }
+    .text-logo> * {
+        width: 100%;
+    }
+    .icon > * {
+        font-size: 1.5rem;
+        width: 35px;
+    }
+}
+.text > * {
+    margin-bottom: 1rem;
+}
+.logo img{
+    border-radius: 18px;    
+}
+.picture {
+    display: grid;
+    grid-template-areas:
+    'p1 p2 p3'
+    'p1 p4 p3'
+    'p5 p4 p6'
+    'p7 p7 p7';
+    gap: 1.25rem;
+}
+.picture> div:nth-child(1) {
+    grid-area: p1;
+}
+.picture> div:nth-child(2) {
+    grid-area: p2;
+}
+.picture> div:nth-child(3) {
+    grid-area: p3;
+}
+.picture> div:nth-child(4) {
+    grid-area: p4;
+}
+.picture> div:nth-child(5) {
+    grid-area: p5;
+}
+.picture> div:nth-child(6) {
+    grid-area: p6;
+}
+.picture> div:nth-child(7) {
+    grid-area: p7;
+}
+div> img {
+    border-radius: 16px;
+    height: 100%;
+}
+.hit {
+    margin-top: 10em;
+}
+.hit> h1 {
+    text-align: center;
+    padding: 1.5em;
+    font-size: 3rem;
+    margin-top: 2em;
+}
+.last {
+    height: 240px;
+}
+.last img{
+    object-fit: cover;
+}
+.underline {
+    border: 2.5px solid var(--orange);
+    width: 72px;
+    margin: 10px auto;
+  }
+.top1 {
+    display: flex;
+    gap: 0.5em;
+}
+.top1 h1{
+    font-size: 3rem;
+}
+.top2 {
+    display: flex;
+    gap: 0.5em;
+    justify-content: center;
+}
+.top2 h1{
+    font-size: 3rem;;
+}
+.footer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 7rem ;
+    padding: 2em 3em;
+    border-top: 1px solid var(--orange) ;
+}
