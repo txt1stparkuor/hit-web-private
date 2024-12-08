@@ -330,6 +330,8 @@ form input, form button {
   border: none;
   height: 50px;
   padding: 8px 16px;
+}
+form button {
   color: var(--other-color);
 }
 .contact ul {
@@ -349,4 +351,7 @@ form input {
 form button {
   background: var(--color-primary);
   margin-left: -10px;
+}
+form {
+  color: white;
 }

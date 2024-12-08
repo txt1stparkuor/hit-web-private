@@ -181,6 +181,9 @@ Extra large devices: 1200px trở lên. */
     display: flex;
     flex-direction: column;
   }
+  form input {
+    width: 120px;
+  }
   .social-media {
     width: 200px;
     margin-left: 20px;
