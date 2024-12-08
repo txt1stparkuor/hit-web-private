@@ -1,0 +1,191 @@
+@import "variables.css";
+/* Extra small devices: 0px - 575px.
+Small devices: 576px - 767px.
+Medium devices: 768px - 991px.
+Large devices: 992px - 1199px.
+Extra large devices: 1200px trở lên. */
+@media (width<=1199px) and (width>=992px) {
+  .coffee-item {
+    width: 250px;
+  }
+  .coffee {
+    width: 250px;
+  }
+  .coffee img {
+    object-fit: contain;
+  }
+  header .content {
+    font-size: 1rem;
+  }
+}
+
+@media (width>=768px) and (width<=991px) {
+  .coffee-item {
+    width: 200px;
+  }
+  .coffee {
+    width: 250px;
+    left: 45%;
+  }
+  .coffee img {
+    object-fit: contain;
+  }
+  header .content {
+    font-size: 1rem;
+    width: 320px;
+  }
+  header .content .title {
+    width: 250px;
+  }
+  ul {
+    gap: 24px;
+  }
+  .categories .cate-logo {
+    width: 60px;
+    height: 60px;
+  }
+  header .categories {
+    gap: 24px;
+  }
+}
+@media (width>=576px) and (width<=767px) {
+  .cold-coffee {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+  .coffee-item {
+    width: 150px;
+  }
+  .coffee {
+    width: 200px;
+    left: 45%;
+  }
+  .coffee img {
+    object-fit: contain;
+  }
+  header .content {
+    font-size: 0.85rem;
+    width: 200px;
+  }
+  header .content .title {
+    width: 200px;
+    font-size: 1.5rem;
+  }
+  ul {
+    gap: 8px;
+  }
+  .categories .cate-logo {
+    width: 40px;
+    height: 40px;
+  }
+  .cate p {
+    font-size: 1.2rem;
+  }
+  header .categories {
+    gap: 24px;
+  }
+  .search input {
+    width: 100px;
+  }
+  .about-us {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media (width<576px) {
+  nav .logo-wrap {
+    width: 25px;
+    height: 25px;
+  }
+  header {
+    height: 500px;
+  }
+  .logo-wrap img {
+    object-fit: contain;
+  }
+  nav ul li {
+    font-size: 0.7rem;
+  }
+  .icon-wrap {
+    width: 13px;
+    height: 13px;
+  }
+  .cold-coffee {
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  }
+  .coffee-item {
+    width: 150px;
+  }
+  .coffee {
+    width: 100px;
+    left: 50%;
+  }
+  .coffee img {
+    object-fit: contain;
+  }
+  .sign-up h1{
+    font-size: 1.5rem;
+  }
+  header .content {
+    font-size: 0.6rem;
+    width: 150px;
+  }
+  header .content .title {
+    width: 200px;
+    font-size: 1.4rem;
+  }
+  ul {
+    gap: 5px;
+  }
+  .categories .cate-logo {
+    width: 30px;
+    height: 30px;
+  }
+  .cate p {
+    font-size: 0.6rem;
+  }
+  header .categories {
+    gap: 24px;
+  }
+  .search input {
+    width: 40px;
+  }
+  .about-us {
+    flex-direction: column;
+    align-items: center;
+  }
+  .icon-wrap img {
+    width: 20px;
+    height: 20px;
+  }
+  .human-wrap {
+    width: 250px;
+    height: 250px;
+  }
+  .outside-wrapper span,
+  .news h3 {
+    font-size: 1rem;
+  }
+  .card p {
+    font-size: 0.9rem;
+  } 
+  .card h1 {
+    font-size: 1.3rem;
+  }
+  li {
+    font-size: 0.8rem;
+  }
+  form button {
+    margin: 0;
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  .social-media {
+    width: 200px;
+    margin-left: 20px;
+  }
+  .footer__logo {
+    flex-wrap: wrap;
+  }
+}
