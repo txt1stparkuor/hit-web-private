@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Sinh số tự động</h1>
+    <div class="wrapper">
+        <input type="number" placeholder="Nhập số lượng">
+        <button>Tạo</button>
+    </div>
+    <div class="container">
+        <span>Số chắn: None</span>
+        <span>Số lẻ: None</span>
+        <span>Số nguyên tố: None</span>
+    </div>
+    <div class="grid-container">
+    </div>
+    <script>
+        const button=document.querySelector("button");
+        const input=document.querySelector("input"); 
+        const grid=document.querySelector(".grid-container");
+        const spanCount=document.querySelectorAll("span");
+        button.addEventListener("click", function() {
+            grid.innerHTML = "";
+            let evenCount=0, oddCount=0, primeCount=0;
+            let n=input.value;
+            let prime=primeSieve(n);
+            for (let i=0;i<n;i++) {
+                let number=document.createElement("div");
+                number.textContent=i;
+                if (prime[i]) {
+                    number.style.backgroundColor="#FD5E53";
+                    primeCount++;
+                }
+                else if (isEven(i)) {
+                    number.style.backgroundColor="#79d7be";
+                    evenCount++;
+                }
+                else {
+                    number.style.backgroundColor="#FDDB3A";
+                    oddCount++;
+                }
+                grid.appendChild(number);
+            }
+            spanCount[0].textContent="Số chẵn: "+evenCount;
+            spanCount[1].textContent="Số lẻ: "+oddCount;
+            spanCount[2].textContent="Số nguyên tố: "+primeCount;
+        })
+        function isEven(n) {
+            return n % 2 === 0;
+        }   
+        function primeSieve(n) {
+            let primes= new Array(n+1).fill(true);
+            primes[0] = false;
+            primes[1] = false;
+            for (let i=2;i<=n;i++) primes[i] = true;
+            for (let i = 2; i*i <= n; i++) {
+                if (primes[i]) {
+                    for (let j = i*i; j <= n; j += i)
+                        primes[j] = false;
+                }
+            }
+            return primes;
+        }
+    </script>
+
+</body>
+</html>

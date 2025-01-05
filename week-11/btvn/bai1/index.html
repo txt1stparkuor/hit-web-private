@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <p class="output">
+        Thông báo hiển thị tại đây!
+    </p>
+    <h1>Tính chỉ số BMI</h1>
+    <div class="container">
+        <label for="weight">Cân nặng (kg):</label>
+        <input type="number" id="weight" name="weight"  placeholder="Nhập cân nặng">
+        <label for="height">Chiều cao (m):</label>
+        <input type="number" id="height" name="height"  placeholder="Nhập chiều cao">
+        <button>Tính BMI</button>
+    </div>
+    <script>
+        const weight = document.querySelector("#weight");
+        const height = document.querySelector("#height");
+        const button = document.querySelector("button");
+        const output = document.querySelector(".output");
+        button.addEventListener("click", function () {
+            if (weight.value <= 0 || height.value <= 0) {
+                output.textContent = "Vui lòng nhập cân nặng và chiều cao phù hợp";
+                return;
+            }
+            let bmi = weight.value / (height.value * height.value);
+            const bmiFixed = bmi.toFixed(2);
+            console.log(bmi);
+            if (bmi < 18.5) {
+                output.textContent = `BMI: ${bmiFixed}. Cơ thể bạn quá gầy.`;
+            } else if (bmi >= 18.5 && bmi < 24.9) {
+                output.textContent = `BMI: ${bmiFixed}. Cơ thể bạn đang rất khỏe mạnh.`;
+            } else if (bmi >= 25 && bmi < 29.9) {
+                output.textContent = `BMI: ${bmiFixed}. Bạn đang bị thừa cân.`;
+            } else if (bmi >= 30 && bmi < 34.9) {
+                output.textContent = `BMI: ${bmiFixed}. Bạn đang bị béo phì cấp độ I.`;
+            } else if (bmi >= 35 && bmi < 39.9) {
+                output.textContent = `BMI: ${bmiFixed}. Bạn đang bị béo phì cấp độ II.`;
+            } else if (bmi >= 40) {
+                output.textContent = `BMI: ${bmiFixed}. Bạn đang bị béo phì cấp độ III.`;
+            }
+        })
+    </script>
+</body>
+
+</html>
