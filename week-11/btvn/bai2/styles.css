@@ -42,13 +42,14 @@ body {
     grid-template-columns: repeat(9,80px);
     gap: 10px;
     color: white;
-    text-align: center;
-    align-items: center;
     font-weight: 700;
     font-size: 1.2rem;
     justify-content: center;
 }
 .grid-container > * {
     padding: 0.8rem 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
