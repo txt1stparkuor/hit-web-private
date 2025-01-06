@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <h1>Kiểm tra chính tả v1.0</h1>
+        <div class="input">
+            <input type="text" placeholder="Nhập 1 từ, 1 câu tiếng anh">
+            <button>Add</button>
+        </div>
+        <div class="output">
+            <p class="correct">Số kí tự đúng: 0</p>
+            <p class="wrong">Số kí tự sai: 0</p>
+        </div>
+        <p class="msg"></p>
+        <div class="grid"></div>
+    </div>
+    <script>
+        let input = document.querySelector("input");
+        let addButton = document.querySelector("button");
+        let grid = document.querySelector(".grid");
+        let text = "";
+        let correct = 0;
+        let wrong = 0;
+        let msg = document.querySelector(".msg");
+        addButton.addEventListener("click", function () {
+            k = 0;
+            correct = 0;
+            wrong = 0;
+            msg.textContent="";
+            document.querySelector(".correct").textContent = "Số kí tự đúng: 0";
+            document.querySelector(".wrong").textContent = "Số kí tự sai: 0";
+            grid.innerHTML = "";
+            text = input.value;
+            gridItems = [];
+            for (let i = 0; i < text.length; i++) {
+                let letter = text[i];
+                let key = document.createElement("div");
+                key.textContent = letter;
+                grid.appendChild(key);
+                gridItems.push(key);
+            }
+            document.body.addEventListener("keydown", validate)
+        })
+        function validate(e) {
+            if (e.key === " ") {
+                e.preventDefault();
+            }
+            if (gridItems[k].textContent === e.key) {
+                correct++;
+                gridItems[k].style.backgroundColor = "rgb(121, 215, 190)";
+            }
+            else {
+                wrong++;
+                gridItems[k].style.backgroundColor = "rgb(253, 94, 83)";
+            }
+            if (k === gridItems.length - 1) {
+                document.body.removeEventListener("keydown", validate);
+                document.querySelector(".correct").textContent = `Số kí tự đúng: ${correct}`;
+                document.querySelector(".wrong").textContent = `Số kí tự sai: ${wrong}`;
+                msg.style.fontSize="2rem";  
+                if (wrong > 0) msg.textContent = "Happy christmas(sai)";
+                else msg.textContent = "Happy new year(đúng)";
+                return;
+            }
+            k++;
+        }
+    </script>
+</body>
+
+</html>

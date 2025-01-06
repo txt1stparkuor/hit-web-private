@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1 style="margin-bottom: 2vh;">Vẽ hình v1.0</h1>
+        <table>
+            <tr>
+              <td>Chiều rộng</td>
+              <td><input type="text" placeholder="Nhập chiều rộng" class="width"></td>
+            </tr>
+            <tr>
+              <td>Chiều cao</td>
+              <td><input type="text" placeholder="Nhập chiều cao" class="height"></td>
+            </tr>
+            <tr>
+              <td>Padding</td>
+              <td><input type="text" placeholder="Nhập padding" class="padding"></td>
+            </tr>
+            <tr>
+              <td>Margin</td>
+              <td><input type="text" placeholder="Nhập margin" class="margin"></td>
+            </tr>
+            <tr>
+              <td>Màu nền (Hex, gba, rgba)</td>
+              <td><input type="text" placeholder="Nhập màu nền" class="background-color"></td>
+            </tr>
+            <tr>
+              <td>Hình nền (Đường link online)</td>
+              <td><input type="text" placeholder="Nhập đường dẫn hình nền" class="image" ></td>
+            </tr>
+            <tr>
+              <td>Màu chữ</td>
+              <td><input type="text" placeholder="Nhập màu chữ" class="color"></td>
+            </tr>
+            <tr>
+              <td>Nội dung nhỏ</td>
+              <td><input type="text" placeholder="Nhập nội dung" class="content"></td>
+            </tr>
+          </table>
+          <button class="draw">Vẽ hình</button>
+          <button class="reset">Reset</button>
+    </div>
+    <div class="wrapper">
+      <div class="square">Xin chào</div>
+    </div>
+    <script>
+      const width=document.querySelector(".width");
+      const height=document.querySelector(".height");
+      const padding=document.querySelector(".padding");
+      const margin=document.querySelector(".margin");
+      const background=document.querySelector(".background-color");
+      const image=document.querySelector(".image");
+      const color=document.querySelector(".color");
+      const content=document.querySelector(".content");
+      const drawButton=document.querySelector(".draw");
+      const resetButton=document.querySelector(".reset");
+      const square=document.querySelector(".square");
+      drawButton.addEventListener("click", function() {
+        square.style.width=width.value;
+        square.style.height=height.value;
+        square.style.padding=padding.value;
+        square.style.margin=margin.value;
+        square.style.backgroundColor=background.value;
+        square.style.color=color.value;
+        square.style.backgroundImage=`url(${image.value})`;
+        square.textContent=content.value;
+      })
+      resetButton.addEventListener("click", function() {
+        square.removeAttribute("style");
+        square.textContent="Xin chào";
+      })
+    </script>
+</body>
+</html>
