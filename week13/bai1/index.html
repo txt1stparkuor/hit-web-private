@@ -24,6 +24,10 @@
         let msg=document.querySelector(".msg");
         button.addEventListener("click", function () {
             let string=input.value;
+            if(string==="") {
+                msg.textContent="Hãy nhập đúng chuỗi kí tự";
+                return;
+            }
             let reverseString="";
             let n=string.length;
             msg.innerHTML="";
