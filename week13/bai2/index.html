@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <h2>To-Do List v1.0</h2>
+        <div class="input-wrap">
+            <input type="text" placeholder="Nhập nhiệm vụ mới ở đây" class="task-input">
+            <button class="add-btn">Add</button>
+        </div>
+        <ul class="task-list">
+
+        </ul>
+    </div>
+    <script>
+        let taskList = document.querySelector(".task-list");
+        let input = document.querySelector(".task-input");
+        let addButton = document.querySelector(".add-btn");
+        addButton.addEventListener("click", function () {
+            let task = document.createElement("li");
+            let taskName = input.value.trim();
+            if (taskName !== "") {
+                task.innerHTML =
+                    `<p>${taskName}</p>
+                 <button class="delete-btn">Delete</button>`
+                taskList.appendChild(task);
+                input.value = "";
+                let deleteBtn = task.querySelector(`.delete-btn`);
+                deleteBtn.addEventListener("click", function () {
+                    deleteTask(task);
+                })
+            }
+        })
+        function deleteTask(task) {
+            taskList.removeChild(task);
+        }
+    </script>
+</body>
+
+</html>
