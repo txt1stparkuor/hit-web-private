@@ -43,6 +43,11 @@ h1 {
     border: none;
     font-weight: bold;
     background-color: #0be881;
+    border-radius: 4px;
+    transition: all 0.25s;
+}
+.check:hover {
+    background-color: #0be881ad;
 }
 .key-pressed {
     display: flex;
