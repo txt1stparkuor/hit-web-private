@@ -167,7 +167,7 @@ img {
   padding: 1rem;
 }
 .product-detail .img-wrap img {
-  object-fit: cover;
+  object-fit: contain;
   max-width: 200px;
   cursor: pointer;
   aspect-ratio: 1;
