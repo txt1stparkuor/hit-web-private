@@ -218,6 +218,10 @@ img {
   opacity: 0.75;
 }
 
+.product-details.show-detail .item .action {
+  display: none !important;
+}
+
 /* reponsive */
 
 @media (width <= 925px) {
