@@ -170,6 +170,7 @@ img {
   object-fit: cover;
   max-width: 200px;
   cursor: pointer;
+  aspect-ratio: 1;
 }
 .product-detail .detail {
   display: flex;
