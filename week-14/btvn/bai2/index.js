@@ -9,15 +9,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
 function displayProducts(products) {
   let categories = {};
-  products.forEach(product => {
+  products.forEach((product) => {
     if (!categories[product.category]) {
       categories[product.category] = [];
     }
     categories[product.category].push(product);
   });
 
-  let productListContainer = document.querySelector('.product-list');
-  let productDetailsContainer = document.querySelector('.product-details'); 
+  let productListContainer = document.querySelector(".product-list");
+  let productDetailsContainer = document.querySelector(".product-details");
 
   for (const category in categories) {
     let items = categories[category];
@@ -51,18 +51,16 @@ function displayProducts(products) {
         <p class="item-rating">Rating: ${product.rating.rate} (${product.rating.count} reviews)</p>`;
       productContainer.appendChild(item);
 
-      item.addEventListener('click', () => {
+      item.addEventListener("click", () => {
         displayProductDetail(product);
-        productDetailsContainer.style.display = 'block'; 
-        productDetailsContainer.classList.add('show-detail'); 
+        productDetailsContainer.style.display = "block";
       });
     }
   }
 }
 
 function displayProductDetail(product) {
-  let productDetailContent = document.querySelector('.product-detail');
-  let productDetailsContainer = document.querySelector('.product-details'); 
+  let productDetailContent = document.querySelector(".product-detail");
 
   const productDetailHTML = `
       <p class="cancel" id="cancel-detail">X</p>
@@ -87,11 +85,9 @@ function displayProductDetail(product) {
 
   productDetailContent.innerHTML = productDetailHTML;
 
-  const cancelButton = productDetailContent.querySelector('#cancel-detail');
-
-
-  cancelButton.addEventListener('click', () => {
-    productDetailsContainer.style.display = 'none'; 
-    productDetailsContainer.classList.remove('show-detail'); 
+  const cancelButton = productDetailContent.querySelector("#cancel-detail");
+  const productDetailsContainer = document.querySelector(".product-details");
+  cancelButton.addEventListener("click", () => {
+    productDetailsContainer.style.display = "none";
   });
 }
