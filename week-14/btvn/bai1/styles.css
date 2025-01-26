@@ -1,0 +1,106 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: #f4f4f4;
+    font-family: system-ui, sans-serif;
+    justify-items: center;
+    padding: 10vh 0;
+}
+.wrapper {
+    display: grid;
+    text-align: center;
+    padding: 1rem 2rem;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgb(0 0 0 / 0.1);
+    width: 600px;
+    border-radius: .5rem;
+    gap: .5rem;
+}
+#name-input {
+    min-height: 132px;
+    resize: none;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+.flex-container {
+    display: flex;
+    gap: .5rem;
+    justify-content: center;
+    height: 2rem;
+}
+.flex-container > * {
+    padding: 10px;
+    border-radius: .25rem;
+}
+.flex-container > input {
+    border: 1px solid #ccc;
+}
+.add-btn {
+    background-color: #28a745;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+}
+.task-list {
+    margin-top: 3vh;
+    display: flex;
+    gap: .75rem;
+    flex-direction: column;
+    font-weight: 500;
+}
+.task textarea {
+    resize: none;
+    flex: 1;
+    padding: 1rem;
+}
+.task {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    padding: 1rem 2rem;
+    width: 80vw;
+    gap: 2rem;
+}
+.task-operation {
+    display: flex;
+    gap: 0.75rem;
+}
+.task-operation > * {
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    padding: 6px 10px;
+    color: white;
+    font-size: 14px;
+    font-weight: 300;
+    transition: all 0.25s;
+}
+.complete-btn:hover {
+    background-color: #0056b3;
+}
+.edit-btn:hover {
+    background-color: #e0a800;
+}
+.delete-btn:hover {
+    background-color: #c82333;
+}
+.save-btn:hover {
+    background-color: #28a746bc;
+}
+.complete-btn {
+    background-color: #007bff;
+}
+.edit-btn {
+    background-color: #ffc107;
+}
+.delete-btn {
+    background-color: #dc3545;
+}
+.save-btn {
+    background-color: rgb(40, 167, 69);
+}
