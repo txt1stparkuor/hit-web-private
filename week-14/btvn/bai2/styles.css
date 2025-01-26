@@ -135,6 +135,7 @@ img {
   left: 0;
   background-color: #727272cc;
   display: none;
+  z-index: 1000;
 }
 .product-detail {
   display: flex;
@@ -228,6 +229,9 @@ img {
   }
 }
 @media (width <= 625px) {
+  .product-detail {
+    border-radius: 10px;
+  }
   .infor {
     font-size: 1rem;
   }
