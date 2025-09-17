@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let globalVar = "Nguyen\\Hai\\Duy\" anh nhac em\"  ";
+        function test() {
+            globalVar.toUpperCase;
+            console.log(globalVar) // Có thể truy cập ở mọi nơi
+        }
+        let a=10;
+        console.log(`a=${a===10} la gia tri can tim`);
+        test();  
+        let str="5";
+        let num=5;
+        console.log(+str);
+        console.log(parseFloat(str));
+        console.log(parseInt(str));
+        console.log(Number(str));
+        console.log(num);
+        console.log(str===num);
+        let name=prompt("Ten ban la gi?","Khang");
+        name="dien";
+        console.log(name);
+        alert(`toi ten la ${name}`);
+
+
+
+
+
+
+        function sumOfNumber(str) {
+            let sum=0;
+            for (let i=0;i<str.length;i++) {
+                sum=sum+parseInt(str[i]);
+            }
+            return sum;
+        }
+        function sang(n) {
+            let result = "";
+            let p=new Array(1000).fill(0);
+            p[1]=1;
+            p[0]=1;
+            for (let i=2;i*i<=n;i++) {
+                if (p[i]===0) {
+                    for (let j=i*i;j<=n;j=j+i) p[j]=1;
+                }
+            }
+            for (let i=2;i<=n;i++)   if (p[i] === 0) result += i + " "; 
+            alert(result.trim());
+        }
+        let input=prompt("Nhap vao n:",0);
+        sang(input);
+        console.log(sumOfNumber("12345"));
+    </script>
+</body>
+
+</html>
