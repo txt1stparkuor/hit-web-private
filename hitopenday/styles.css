@@ -3,8 +3,15 @@
   padding: 0;
   box-sizing: border-box;
 }
+html {
+  scroll-behavior: smooth;
+}
 body {
   font-family: "Be Vietnam Pro", serif;
+}
+a {
+  text-decoration: none;
+  color: inherit;
 }
 :root {
   --primary-color: #f06c25;
@@ -19,7 +26,7 @@ body {
 
 /* header */
 header {
-  background-image: url(./assets/imgs/banner.jpg);
+  background-image: url(./assets/imgs/newBanner.jpg);
   width: 100%;
   height: 100vh;
   background-size: cover;
@@ -47,7 +54,7 @@ header nav {
   gap: 2rem;
 }
 .menu ul li {
-  min-width: fit-content;
+  white-space: nowrap;
   font-size: var(--normal-font);
   transition: .25s all;
 }
